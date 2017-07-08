@@ -2,6 +2,9 @@
 
 from __future__ import unicode_literals
 
+import sys
+sys.path.insert(0, "/Users/dbarroso/.virtualenvs/weechat/lib/python2.7/site-packages/")
+
 from functools import wraps
 
 import time
