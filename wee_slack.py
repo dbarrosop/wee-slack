@@ -25,6 +25,9 @@ try:
 except:
     from StringIO import StringIO
 
+import sys
+sys.path.insert(0, "/Users/dbarroso/.virtualenvs/weechat/lib/python2.7/site-packages/")
+
 from websocket import create_connection, WebSocketConnectionClosedException
 
 # hack to make tests possible.. better way?
