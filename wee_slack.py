@@ -1410,6 +1410,7 @@ class SlackChannel(object):
             self.eventrouter.receive(s)
 
     def buffer_prnt(self, nick, text, timestamp=str(time.time()), tagset=None, tag_nick=None, **kwargs):
+        text = re.sub(r"```(?!\n)", "```\n", text)
         data = "{}\t{}".format(format_nick(nick, self.last_line_from), text)
         self.last_line_from = nick
         ts = SlackTS(timestamp)
